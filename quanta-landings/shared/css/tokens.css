@@ -1,0 +1,107 @@
+/*
+ * tokens.css — Variables de marca Quanta (Design Tokens oficiales)
+ * Fuente: quantapro.com.co · Versión: 1.0 · Marzo 2026
+ *
+ * IMPORTANTE: Este archivo es la única fuente de verdad para colores,
+ * tipografía y espaciado de la marca. No hardcodear valores en otros archivos.
+ * Cualquier cambio de marca se hace SOLO aquí.
+ *
+ * Uso en landing:
+ *   <link rel="stylesheet" href="../../shared/css/tokens.css" />
+ */
+
+:root {
+
+  /* ── COLORES PRIMARIOS ──────────────────────────────────── */
+  --q-pink:              #E91E8C;   /* color de marca principal */
+  --q-pink-alt:          #FF1B8D;   /* variante vibrante — glows */
+  --q-pink-dark:         #C91A78;   /* extremo oscuro del gradiente CTA */
+
+  /* ── FONDOS ─────────────────────────────────────────────── */
+  --q-bg:                #0A0A0A;
+  --q-bg-nav:            rgba(15, 12, 18, 0.82);
+  --q-surface:           #1A1A1A;
+  --q-surface-2:         rgba(255, 255, 255, 0.03);
+  --q-surface-3:         rgba(255, 255, 255, 0.05);
+
+  /* ── BRAND SURFACES (con transparencia) ─────────────────── */
+  --q-pink-surface:      rgba(233, 30, 140, 0.15);
+  --q-pink-surface-soft: rgba(233, 30, 140, 0.10);
+  --q-pink-glow:         rgba(233, 30, 140, 0.25);
+  --q-pink-glow-soft:    rgba(255, 27, 141, 0.08);
+  --q-pink-glow-mid:     rgba(255, 27, 141, 0.12);
+
+  /* ── BORDES ──────────────────────────────────────────────── */
+  --q-border-pink:       rgba(233, 30, 140, 0.30);
+  --q-border-soft:       rgba(255, 255, 255, 0.07);
+
+  /* ── TEXTO ───────────────────────────────────────────────── */
+  --q-text:              #FFFFFF;
+  --q-text-2:            rgba(255, 255, 255, 0.70);
+  --q-text-3:            rgba(255, 255, 255, 0.40);
+
+  /* ── GRADIENTES ──────────────────────────────────────────── */
+  --q-gradient-cta:
+    linear-gradient(135deg, #E91E8C 0%, #C91A78 100%);
+  --q-gradient-hero-radial:
+    radial-gradient(circle,
+      rgba(233,30,140,0.25) 0%,
+      rgba(180,20,110,0.15) 30%,
+      rgba(100,10,70,0.08) 60%,
+      transparent 100%);
+  --q-gradient-shine:
+    linear-gradient(90deg, transparent, rgba(255,27,141,0.04), transparent);
+  --q-gradient-grid:
+    radial-gradient(rgba(255,27,141,0.08) 1px, transparent 1px);
+
+  /* ── TIPOGRAFÍA ──────────────────────────────────────────── */
+  --q-font:              'Poppins', sans-serif;
+
+  /* ── ESCALA TIPOGRÁFICA ──────────────────────────────────── */
+  --q-text-hero:         clamp(36px, 5vw, 64px);   /* H1 hero */
+  --q-text-h2:           clamp(28px, 4vw, 44px);   /* H2 sección */
+  --q-text-h3:           clamp(18px, 2vw, 24px);   /* H3 card */
+  --q-text-body:         16px;
+  --q-text-sm:           14px;
+  --q-text-xs:           13px;
+  --q-text-xxs:          12px;
+
+  /* ── PESOS TIPOGRÁFICOS ──────────────────────────────────── */
+  --q-fw-regular:        400;
+  --q-fw-semibold:       600;
+  --q-fw-bold:           700;
+  --q-fw-extrabold:      800;
+
+  /* ── ESPACIADO ───────────────────────────────────────────── */
+  --q-space-xs:          8px;
+  --q-space-sm:          16px;
+  --q-space-md:          24px;
+  --q-space-lg:          48px;
+  --q-space-xl:          100px;
+
+  /* ── RADIOS ──────────────────────────────────────────────── */
+  --q-radius-pill:       50px;   /* firma visual — botones */
+  --q-radius-card:       16px;
+  --q-radius-tag:        20px;
+  --q-radius-input:      12px;
+  --q-radius-sm:         8px;
+
+  /* ── SOMBRAS ─────────────────────────────────────────────── */
+  --q-shadow-btn:        0 4px 24px rgba(233, 30, 140, 0.35);
+  --q-shadow-btn-hover:  0 8px 40px rgba(233, 30, 140, 0.55);
+  --q-shadow-card:       0 12px 40px rgba(233, 30, 140, 0.20);
+  --q-shadow-form:       0 24px 80px rgba(0,0,0,0.4),
+                         0 0 0 1px rgba(233, 30, 140, 0.08);
+
+  /* ── TRANSICIONES ────────────────────────────────────────── */
+  --q-transition-fast:   0.2s ease;
+  --q-transition-mid:    0.3s ease;
+
+  /* ── BREAKPOINTS (referencia — usar en media queries) ────── */
+  /* mobile-sm:  375px  */
+  /* mobile:     480px  */
+  /* tablet:     768px  */
+  /* desktop-sm: 1024px */
+  /* desktop:    1280px */
+  /* desktop-lg: 1440px */
+}

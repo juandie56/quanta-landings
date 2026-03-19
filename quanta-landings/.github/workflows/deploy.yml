@@ -1,0 +1,62 @@
+# ============================================================
+# deploy.yml — CI/CD Quanta Landing Pages
+# Despliega automáticamente a GitHub Pages en cada push a main
+# ============================================================
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  # Permite ejecutar manualmente desde la UI de GitHub
+  workflow_dispatch:
+
+# Permisos necesarios para deploy a GitHub Pages
+permissions:
+  contents: read
+  pages:    write
+  id-token: write
+
+# Solo un deploy a la vez
+concurrency:
+  group:              "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. Checkout del código
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Validación básica — verificar que los archivos clave existen
+      - name: Validate structure
+        run: |
+          echo "✓ Verificando estructura del repositorio..."
+          test -f campaigns/manufactura-general/index.html  && echo "✓ manufactura-general/index.html"
+          test -f shared/data/form-data.json               && echo "✓ shared/data/form-data.json"
+          test -f shared/css/tokens.css                    && echo "✓ shared/css/tokens.css"
+          echo "✓ Validación completada"
+
+      # 3. Configurar GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 4. Subir el repositorio completo como artefacto de Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Subir desde la raíz — GitHub Pages servirá todo el repo
+          path: '.'
+
+      # 5. Deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

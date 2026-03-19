@@ -1,0 +1,53 @@
+# ============================================================
+# .gitignore — Quanta Landing Pages
+# ============================================================
+
+# ── Sistema Operativo ──────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editores ───────────────────────────────────────────────
+.vscode/settings.json      # settings personales (mantener extensions.json)
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Node (si se usa en scripts de build o utilidades) ──────
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-debug.log*
+
+# ── Variables de entorno y secrets ────────────────────────
+.env
+.env.local
+.env.*.local
+secrets.json
+**/config.local.js
+
+# ── Build outputs ─────────────────────────────────────────
+dist/
+build/
+.cache/
+
+# ── Logs ──────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Assets temporales o de trabajo ────────────────────────
+assets/temp/
+**/*.psd
+**/*.ai
+**/*.sketch
+
+# ── Archivos de respaldo ───────────────────────────────────
+**/*.bak
+**/*.backup
+**/*_OLD.*

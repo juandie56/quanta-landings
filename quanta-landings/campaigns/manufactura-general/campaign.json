@@ -1,0 +1,39 @@
+{
+  "_comment": "Metadatos de campaña — NO contiene secrets ni endpoints reales",
+  "slug":          "manufactura-general",
+  "name":          "Manufactura General 2026",
+  "segment":       "Industria manufacturera colombiana",
+  "status":        "active",
+  "created_at":    "2026-03-19",
+  "updated_at":    "2026-03-19",
+  "owner":         "QPAlliance Digital Team",
+
+  "seo": {
+    "title":       "Quanta — Software MRP para Manufactura | Agenda tu Demo Gratis",
+    "description": "Software de gestión empresarial para industria manufacturera colombiana. Conecta producción, inventarios, compras, CRM y talento humano en un solo sistema.",
+    "slug_url":    "https://quantapro.com.co/landing/manufactura-general",
+    "og_image":    "https://quantapro.com.co/og/manufactura-general.jpg"
+  },
+
+  "copy": {
+    "badge":       "🏭 Industria 4.0 · Manufactura Colombia",
+    "headline":    "Deja de perder dinero por procesos desconectados en tu planta",
+    "subheadline": "Quanta centraliza producción, inventarios, compras y talento humano en un solo sistema. Decisiones en tiempo real, cero reprocesos.",
+    "cta_primary": "Agenda mi demo gratuita →",
+    "cta_secondary": "▶ Ver cómo funciona"
+  },
+
+  "tracking": {
+    "campaign_name": "manufactura-general-2026",
+    "utm_campaign":  "manufactura-general-q1-2026"
+  },
+
+  "modules_featured": [
+    "Producción",
+    "Inventarios",
+    "Compras",
+    "CRM",
+    "Talento Humano",
+    "Business Intelligence"
+  ]
+}

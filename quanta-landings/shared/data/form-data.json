@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Base de datos de opciones para formularios Quanta Landing Pages",
+    "last_updated": "2026-03-19",
+    "maintainer": "QPAlliance Digital Team"
+  },
+
+  "country_codes": [
+    { "value": "+57", "label": "🇨🇴 Colombia (+57)", "default": true },
+    { "value": "+1",  "label": "🇺🇸 Estados Unidos (+1)" },
+    { "value": "+52", "label": "🇲🇽 México (+52)" },
+    { "value": "+54", "label": "🇦🇷 Argentina (+54)" },
+    { "value": "+56", "label": "🇨🇱 Chile (+56)" },
+    { "value": "+51", "label": "🇵🇪 Perú (+51)" },
+    { "value": "+58", "label": "🇻🇪 Venezuela (+58)" },
+    { "value": "+593","label": "🇪🇨 Ecuador (+593)" },
+    { "value": "+502","label": "🇬🇹 Guatemala (+502)" },
+    { "value": "+34", "label": "🇪🇸 España (+34)" }
+  ],
+
+  "industries": [
+    { "value": "",                     "label": "Selecciona tu industria", "disabled": true },
+    { "value": "manufactura-general",  "label": "🏭 Manufactura General" },
+    { "value": "alimentos-bebidas",    "label": "🍃 Alimentos y Bebidas" },
+    { "value": "textil-confeccion",    "label": "👕 Textil y Confección" },
+    { "value": "metalmecanica",        "label": "⚙️ Metalmecánica" },
+    { "value": "plasticos-caucho",     "label": "🔩 Plásticos y Caucho" },
+    { "value": "farmaceutica",         "label": "💊 Farmacéutica" },
+    { "value": "cosmetica",            "label": "✨ Cosmética y Cuidado Personal" },
+    { "value": "quimica",              "label": "🧪 Química e Industria Pesada" },
+    { "value": "electronica",          "label": "💡 Electrónica y Tecnología" },
+    { "value": "madera-muebles",       "label": "🪵 Madera y Muebles" },
+    { "value": "construccion",         "label": "🏗️ Construcción y Materiales" },
+    { "value": "automotriz",           "label": "🚗 Automotriz y Autopartes" },
+    { "value": "agro-agroindustria",   "label": "🌾 Agro e Agroindustria" },
+    { "value": "otra",                 "label": "Otra industria" }
+  ],
+
+  "company_sizes": [
+    { "value": "",        "label": "Número de empleados", "disabled": true },
+    { "value": "1-10",    "label": "1 – 10 empleados" },
+    { "value": "11-50",   "label": "11 – 50 empleados" },
+    { "value": "51-200",  "label": "51 – 200 empleados" },
+    { "value": "201-500", "label": "201 – 500 empleados" },
+    { "value": "+500",    "label": "Más de 500 empleados" }
+  ],
+
+  "production_operators": [
+    { "value": "",       "label": "Operarios en producción", "disabled": true },
+    { "value": "1-10",   "label": "1 – 10 operarios" },
+    { "value": "11-30",  "label": "11 – 30 operarios" },
+    { "value": "31-100", "label": "31 – 100 operarios" },
+    { "value": "101-300","label": "101 – 300 operarios" },
+    { "value": "+300",   "label": "Más de 300 operarios" }
+  ]
+}
