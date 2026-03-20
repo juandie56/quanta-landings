@@ -399,15 +399,19 @@
       box-shadow: 0 0 8px var(--q-pink);
       flex-shrink: 0;
     }
-    .orb-module--1 { top: 8%;  left: -8%; animation: float-1 5s ease-in-out infinite; }
-    .orb-module--2 { top: 28%; right: -12%; animation: float-2 6s ease-in-out infinite; }
-    .orb-module--3 { bottom: 30%; left: -14%; animation: float-3 4.5s ease-in-out infinite; }
-    .orb-module--4 { bottom: 10%; right: -8%; animation: float-1 7s ease-in-out infinite reverse; }
-    .orb-module--5 { top: 62%; left: 50%; transform: translateX(-50%); animation: float-2 5.5s ease-in-out infinite reverse; }
-    .orb-module--6 { top: 30%; left: 5%; transform: translateX(-50%); animation: float-2 5.5s ease-in-out infinite reverse; }
-    @keyframes float-1 { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-12px)} }
-    @keyframes float-2 { 0%,100%{transform:translateY(0)}  50%{transform:translateY(10px)} }
-    @keyframes float-3 { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-8px)} }
+    /* Distribución en reloj: 12 → 2 → 4 → 6 → 8 → 10 */
+    .orb-module--1 { top: -4%;  left: 50%;   animation: float-c1 5s   ease-in-out infinite; }          /* 12h — Producción          */
+    .orb-module--2 { top: 18%;  right: -16%; animation: float-2  6s   ease-in-out infinite; }          /* 2h  — Inventario          */
+    .orb-module--3 { bottom: 18%; right: -12%; animation: float-3 4.5s ease-in-out infinite; }         /* 4h  — Compras             */
+    .orb-module--4 { bottom: -4%; left: 50%;  animation: float-c2 7s   ease-in-out infinite; }         /* 6h  — Business Intelligence */
+    .orb-module--5 { bottom: 18%; left: -7%;  animation: float-2  5.5s ease-in-out infinite reverse; } /* 8h  — RRHH                */
+    .orb-module--6 { top: 18%;  left: -7%;   animation: float-3  6.5s ease-in-out infinite reverse; }  /* 10h — CRM                 */
+    /* float-1/2/3: módulos laterales | float-c1/c2: módulos centrados (translateX preservado) */
+    @keyframes float-1  { 0%,100%{transform:translateY(0)}                        50%{transform:translateY(-12px)} }
+    @keyframes float-2  { 0%,100%{transform:translateY(0)}                        50%{transform:translateY(10px)} }
+    @keyframes float-3  { 0%,100%{transform:translateY(0)}                        50%{transform:translateY(-8px)} }
+    @keyframes float-c1 { 0%,100%{transform:translateX(-50%) translateY(0)}       50%{transform:translateX(-50%) translateY(-12px)} }
+    @keyframes float-c2 { 0%,100%{transform:translateX(-50%) translateY(0)}       50%{transform:translateX(-50%) translateY(10px)} }
 
     /* Partículas decorativas */
     .particle {
@@ -1077,24 +1081,24 @@
       <div class="hero__visual" aria-hidden="true">
         <div class="orb-container">
           <div class="orb"></div>
-          <!-- Módulos flotantes -->
+          <!-- Módulos flotantes — distribución en reloj (12 → 2 → 4 → 6 → 8 → 10) -->
           <div class="orb-module orb-module--1">
             <div class="orb-module__dot"></div> Producción
           </div>
           <div class="orb-module orb-module--2">
-            <div class="orb-module__dot"></div> Inventarios
+            <div class="orb-module__dot"></div> Inventario
           </div>
           <div class="orb-module orb-module--3">
             <div class="orb-module__dot"></div> Compras
           </div>
           <div class="orb-module orb-module--4">
-            <div class="orb-module__dot"></div> CRM
-          </div>
-          <div class="orb-module orb-module--5">
             <div class="orb-module__dot"></div> Business Intelligence
           </div>
           <div class="orb-module orb-module--5">
             <div class="orb-module__dot"></div> RRHH
+          </div>
+          <div class="orb-module orb-module--6">
+            <div class="orb-module__dot"></div> CRM
           </div>
         </div>
       </div>
