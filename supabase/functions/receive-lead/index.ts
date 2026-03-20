@@ -29,8 +29,8 @@ serve(async (req) => {
 
     // ===== 2. GUARDAR EN SUPABASE =====
     const supabase = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
+      Deno.env.get("DB_URL") ?? "",
+      Deno.env.get("DB_SERVICE_ROLE_KEY") ?? ""
     );
 
     const { error: dbError } = await supabase.from("leads").insert({
