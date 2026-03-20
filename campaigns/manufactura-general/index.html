@@ -371,6 +371,19 @@
         inset 0 0 60px rgba(233,30,140,0.10);
       animation: orb-pulse 4s ease-in-out infinite;
     }
+    .orb-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: auto;
+  opacity: 0.90;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 18px rgba(233, 30, 140, 0.6));
+  animation: orb-pulse 4s ease-in-out infinite;
+}
     @keyframes orb-pulse {
       0%, 100% { box-shadow: 0 0 80px rgba(233,30,140,0.20), inset 0 0 60px rgba(233,30,140,0.10); }
       50%       { box-shadow: 0 0 120px rgba(233,30,140,0.35), inset 0 0 80px rgba(233,30,140,0.18); }
@@ -1081,6 +1094,7 @@
       <div class="hero__visual" aria-hidden="true">
         <div class="orb-container">
           <div class="orb"></div>
+          <img src="../../assets/icons/logo-quanta-icon.png" alt="" class="orb-logo" aria-hidden="true" />
           <!-- Módulos flotantes — distribución en reloj (12 → 2 → 4 → 6 → 8 → 10) -->
           <div class="orb-module orb-module--1">
             <div class="orb-module__dot"></div> Producción
@@ -1133,7 +1147,7 @@
         <div class="pain-card__icon" aria-hidden="true">⏱️</div>
         <h3 class="pain-card__title">Paros de planta por falta de materiales</h3>
         <p class="pain-card__desc">
-          Sin visibilidad en tiempo real de inventarios, los paros no planeados cuestan miles de pesos por hora y dañan la confianza del cliente.
+          Sin visibilidad en tiempo real de inventarios, los paros no planeados cuestan millones de pesos por hora y dañan la confianza de tus clientes.
         </p>
       </div>
       <!-- Pain 3 -->
@@ -1250,9 +1264,9 @@
     <div class="form-wrapper">
       <!-- Encabezado -->
       <div class="form-header">
-        <span class="tag">📅 Demo gratuita</span>
+        <span class="tag">📅 Consultoría gratuita</span>
         <h2>Agenda tu consultoría sin costo</h2>
-        <p>Nuestros especialistas te contactará en <strong style="color:#fff">instantaneamente</strong></p>
+        <p>Nuestros especialistas te contactarán <strong style="color:#fff">inmediatamente</strong></p>
       </div>
 
       <!-- Card del formulario -->
@@ -1423,7 +1437,7 @@
 
           <!-- Botón submit -->
           <button type="submit" class="btn-submit" id="btn-submit">
-            Quiero mi demo gratuita →
+            Quiero mi consultoría gratuita →
           </button>
 
           <!-- Error de envío -->
@@ -1446,7 +1460,7 @@
           <h3>¡Todo listo, te esperamos!</h3>
           <p>
             Un especialista de Quanta revisará tu información y te contactará
-            <strong>instantaneamente</strong> para guiarte en este camino Quanta.
+            <strong>inmediatamente</strong> para guiarte en este camino Quanta.
           </p>
           <a
             href="https://wa.me/573212129898?text=Hola%2C%20acabo%20de%20solicitar%20una%20demo%20de%20Quanta%20y%20quiero%20coordinar%20el%20horario"
